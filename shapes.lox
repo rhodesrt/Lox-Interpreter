@@ -1,0 +1,31 @@
+class Shape {
+  init(numberOfSides, color) {
+    this.numberOfSides = numberOfSides;
+    this.color = color;
+  }
+}
+
+class Rectangle < Shape {
+  init(numberOfSides, color, length, width) {
+    super.init(numberOfSides, color);
+    this.length = length;
+    this.width = width;
+  }
+
+  computeArea() {
+    var area = this.length * this.width;
+    {
+      print "Area: ";
+      print area;
+    }
+  }
+
+  printInfo() {
+    print "Sides: " + this.numberOfSides;
+    print "Color: " + this.color;
+  }
+}
+
+var rectangle = Rectangle("4", "red", 4, 6);
+rectangle.computeArea();
+rectangle.printInfo();
